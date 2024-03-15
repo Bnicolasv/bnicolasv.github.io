@@ -7,7 +7,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Benjamín Valenzuela Prieto</h1>
-    <h2>Ingeniería Civil en Ciencias de la Computación</h2>
+    <h1 class="header-blue">Benjamín Valenzuela Prieto</h1>
+    <h2 class="header-red">Información personal</h2>
+    <h3>Carrera: Ingeniería Civil en Ciencias de la computación<h3>
+    <h3>Año de ingreso: 2020<h3>
+    <h3>Github: <a href="https://github.com/Bnicolasv">Bnicolasv</a></h3>
+    <h3>Sobre mi...</h3>
+    <p>
+        Joven estudiante de Ingeniería Civil en Ciencias de la computación, apasionado por la ropa y las zapatillas. Participante del movimiento Guias y Scouts desde el año 2015.
+    </p>
+    <table>
+        <tr>
+            <td class="tb-header">Habilidades</td>
+            <td class="tb-header">Nivel</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Avanzado</td>
+        </tr>
+        <tr>
+            <td>Javascript</td>
+            <td>Básico</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>Intermedio</td>
+        </tr>
+        <tr>
+            <td>C++</td>
+            <td>Intermedio</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Básico</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Intermedio</td>
+        </tr>
+        <tr>
+            <td>Git</td>
+            <td>Intermedio</td>
+        </tr>
+    </table>
+    <button id="buttonText">Agrega el elemento:</button>
+    <input type="text" id="inputText">
+
+    <div id="userText">
+
+    </div>
+
+    <script>
+        document.getElementById("buttonText").addEventListener("click", function(){
+            var input = document.getElementById("inputText").value;
+            document.getElementById("userText").textContent = input;
+        });
+    </script>
 </body>
 </html>
