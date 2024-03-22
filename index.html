@@ -5,63 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benjamín Valenzuela Prieto</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <h1 class="header-blue">Benjamín Valenzuela Prieto</h1>
-    <h2 class="header-red">Información personal</h2>
-    <h3>Carrera: Ingeniería Civil en Ciencias de la computación<h3>
-    <h3>Año de ingreso: 2020<h3>
-    <h3>Github: <a href="https://github.com/Bnicolasv">Bnicolasv</a></h3>
-    <h3>Sobre mi...</h3>
-    <p>
-        Joven estudiante de Ingeniería Civil en Ciencias de la computación, apasionado por la ropa y las zapatillas. Participante del movimiento Guias y Scouts desde el año 2015.
-    </p>
-    <table>
-        <tr>
-            <td class="tb-header">Habilidades</td>
-            <td class="tb-header">Nivel</td>
-        </tr>
-        <tr>
-            <td>Python</td>
-            <td>Avanzado</td>
-        </tr>
-        <tr>
-            <td>Javascript</td>
-            <td>Básico</td>
-        </tr>
-        <tr>
-            <td>C</td>
-            <td>Intermedio</td>
-        </tr>
-        <tr>
-            <td>C++</td>
-            <td>Intermedio</td>
-        </tr>
-        <tr>
-            <td>HTML</td>
-            <td>Básico</td>
-        </tr>
-        <tr>
-            <td>SQL</td>
-            <td>Intermedio</td>
-        </tr>
-        <tr>
-            <td>Git</td>
-            <td>Intermedio</td>
-        </tr>
-    </table>
-    <button id="buttonText">Agrega el elemento:</button>
-    <input type="text" id="inputText">
+    <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col">
+              <h2 class="header-red">Información personal</h2>
+              <h3>Carrera: Ingeniería Civil en Ciencias de la computación<h3>
+              <h3>Año de ingreso: 2020<h3>
+              <h3>Github: <a href="https://github.com/Bnicolasv">Bnicolasv</a></h3>
+              <h3>Sobre mi...</h3>
+              <p>
+                  Joven estudiante de Ingeniería Civil en Ciencias de la computación, apasionado por la ropa y las zapatillas. Participante del movimiento Guias y Scouts desde el año 2015.
+              </p>
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Scout
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Asistente de la Avanzada Purinuqaña</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Universidad de Chile
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Aguante el bulla!</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <h2 class="header-red">Habilidades</h2>
+              <table>
+                  <tr>
+                      <td class="tb-header">Habilidades</td>
+                      <td class="tb-header">Nivel</td>
+                  </tr>
+                  <tr>
+                      <td>Python</td>
+                      <td>Avanzado</td>
+                  </tr>
+                  <tr>
+                      <td>Javascript</td>
+                      <td>Básico</td>
+                  </tr>
+                  <tr>
+                      <td>C</td>
+                      <td>Intermedio</td>
+                  </tr>
+                  <tr>
+                      <td>C++</td>
+                      <td>Intermedio</td>
+                  </tr>
+                  <tr>
+                      <td>HTML</td>
+                      <td>Básico</td>
+                  </tr>
+                  <tr>
+                      <td>SQL</td>
+                      <td>Intermedio</td>
+                  </tr>
+                  <tr>
+                      <td>Git</td>
+                      <td>Intermedio</td>
+                  </tr>
+              </table>
+              <div class="alert alert-dark" role="alert">
+                DANGER!
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 12rem;">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="Emblema_del_Club_Universidad_de_Chile.png" class="img-fluid" alt="...">
+                </div>
+                <!-- <div class="card-body">
+                  <p class="card-text"></p>
+                </div> -->
+              </div>
+            <button id="buttonText">Agrega el texto:</button>
+            <input type="text" id="inputText">
+            <div id="userText">
+                <script>
+                    document.getElementById("buttonText").addEventListener("click", function(){
+                        var input = document.getElementById("inputText").value;
+                        document.getElementById("userText").textContent = input;
+                    });
+                </script>
+                </div>
+        
+            
+          </div>
+        </div>
+      </div>
 
-    <div id="userText">
-
-    </div>
-
-    <script>
-        document.getElementById("buttonText").addEventListener("click", function(){
-            var input = document.getElementById("inputText").value;
-            document.getElementById("userText").textContent = input;
-        });
-    </script>
 </body>
 </html>
